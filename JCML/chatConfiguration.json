@@ -1,0 +1,78 @@
+{
+    "matches": [
+      {
+        "pattern": "HELLO!",
+        "responses": ["Hi there!", "Hello! How can I help you today?"]
+      },
+      {
+        "pattern": "WHAT IS YOUR NAME?",
+        "responses": ["I'm a chatbot. You can call me InvestSentiment."]
+      },
+      {
+        "pattern": "TELL ME ABOUT YOURSELF",
+        "responses": ["I'm here to assist you with any questions you have."]
+      },
+      {
+        "pattern": "GOODBYE",
+        "responses": ["Goodbye!", "See you later!"]
+      },
+      {
+        "pattern": "HOW ARE YOU?",
+        "responses": ["I'm just a bot, so I don't have feelings, but thanks for asking!"]
+      },
+      {
+        "pattern": "I WANT TO BUY @@STOCKNAMES1",
+        "responses": ["That sounds like a good decision!","@@STOCKNAMES1 is a great company"]
+      },
+      {
+        "pattern": "WHAT PEOPLE THINK ABOUT @@STOCKNAMES1",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "Test @@STOCKNAMES1",
+        "responses": ["@$test(a,b,@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "What stock I tested?",
+        "responses": ["I tested @@STOCKNAMES1"]
+      },
+      {
+        "pattern": "Test2 @@STOCKNAMES1",
+        "responses": ["@$test2(a,b,@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "a",
+        "responses": ["The sentiment about tesla is @$getSentiment(tesla)"]
+      },
+      {
+        "pattern": "b",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$getSentiment(@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "reddit @@STOCKNAMES1",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "markov @@STOCKNAMES1",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "bs @@STOCKNAMES1",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$bsSentiment(@@STOCKNAMES1)"]
+      },
+      {
+        "pattern": "CAN YOU HELP ME",
+        "responses": ["Of course! What do you need help with?"]
+      }
+    ],
+    "types": {
+      "stocknames": ["TESLA", "APPLE", "META", "BOEING"]
+    },
+    "functions":{
+      "test2":"/Users/acantor/Desktop/test2",
+      "redditSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis",
+      "markovSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis",
+      "bsSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis"
+    }
+  }
+  
