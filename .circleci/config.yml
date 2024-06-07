@@ -9,17 +9,11 @@ jobs:
       - gcp-gcr/gcr-auth:
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/build-image:
-          image: docker-repo/api
-          no_output_timeout: 20m
+          image: api
           tag: ${CIRCLE_SHA1}
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/push-image:
-          digest-path: /tmp/digest.txt
-          image: docker-repo/api
-          registry-url: us-central1-docker.pkg.dev
-      - run:
-          command: |
-            echo "Digest is: $(</tmp/digest.txt)"
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
 workflows:
   commit:
     jobs:
