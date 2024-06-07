@@ -10,10 +10,10 @@ jobs:
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/build-image:
           image: api
-          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
+          registry-url: us-central1-docker.pkg.dev/docker-repo
       - gcp-gcr/push-image:
           image: api
-          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
+          registry-url: us-central1-docker.pkg.dev/docker-repo
 workflows:
   commit:
     jobs:
