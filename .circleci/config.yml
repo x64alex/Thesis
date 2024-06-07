@@ -1,72 +1,24 @@
-version: 2.1
+version: '2.1'
 orbs:
-  python: circleci/python@2
-  gcp-gcr: circleci/gcp-gcr@0.15.3
-
-executors:
-  docker-executor:
-    docker:
-      - image: circleci/python:3.9
-
-
-
+  gcp-gcr: circleci/gcp-gcr@x.y.z
 jobs:
-  test-python:
-    docker:
-      - image: cimg/python:3.8-node
-    steps:
-      - checkout
-      - python/install-packages
-      - run:
-          name: Run tests
-          command: pytest --junitxml=junit.xml || ((($? == 5)) && echo 'Did not find any tests to run.')
-      - store_test_results:
-          path: junit.xml
   build-and-push:
-    executor: docker-executor
+    executor: gcp-gcr/default
     steps:
       - checkout
-      # - run:
-      #     name: Install Google Cloud SDK
-      #     command: |
-      #       echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-      #       sudo apt-get install -y apt-transport-https ca-certificates
-      #       sudo apt-get update && sudo apt-get install -y google-cloud-sdk
-
-      # - run:
-      #     name: Authenticate with Google Cloud
-      #     command: |
-      #       echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
-      #       gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
-      #       gcloud config set project your-gcp-project-id
-      #       gcloud auth configure-docker
-
-      - run:
-          name: Build Docker image
-          command: docker build -t api .
-      - docker/build:
-          image: my-flask-app2
-          tag: ${CIRCLE_SHA1}
-
-      - docker/push:
-          image: us-central1-docker.pkg.dev/your-gcp-project-id/your-repo-name/my-flask-app2
-          tag: ${CIRCLE_SHA1}
-      - run:
-          name: Tag Docker image
-          command: docker tag api us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/api:${CIRCLE_SHA1}
-
-      - run:
-          name: Push Docker image to Google Container Registry
-          command: docker push us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/api:${CIRCLE_SHA1}
-workflows:
-  build:
-    jobs:
-      # - test-python
-      # - build-and-push
-      - gcp-gcr/build-and-push-image:
+      - gcp-gcr/gcr-auth
+      - gcp-gcr/build-image:
           image: api
-          filters:
-            branches:
-              only:
-                main
-
+          no_output_timeout: 20m
+          registry-url: eu.gcr.io
+      - gcp-gcr/push-image:
+          digest-path: /tmp/digest.txt
+          image: orb-test
+          registry-url: eu.gcr.io
+      - run:
+          command: |
+            echo "Digest is: $(</tmp/digest.txt)"
+workflows:
+  commit:
+    jobs:
+      - build-and-push
