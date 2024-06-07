@@ -12,4 +12,4 @@ class Constants(object):
         return self._constants.get(key)
 
 constants = Constants()
-constants.set_constant("path","/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis")
+constants.set_constant("path","./SentimentAnalysis")

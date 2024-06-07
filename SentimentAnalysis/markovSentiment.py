@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis')
+sys.path.append('./SentimentAnalysis')
 
 from SocialClient import SocialClient, RedditAdapter, get_post_sentiment
 from markov import get_sentiment_score

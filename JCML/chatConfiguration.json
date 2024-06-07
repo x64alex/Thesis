@@ -69,10 +69,9 @@
       "stocknames": ["TESLA", "APPLE", "META", "BOEING"]
     },
     "functions":{
-      "test2":"/Users/acantor/Desktop/test2",
-      "redditSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis",
-      "markovSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis",
-      "bsSentiment": "/Users/acantor/Documents/GitHub/Semester6/Thesis/SentimentAnalysis"
+      "redditSentiment": "./SentimentAnalysis",
+      "markovSentiment": "./SentimentAnalysis",
+      "bsSentiment": "./SentimentAnalysis"
     }
   }
   
