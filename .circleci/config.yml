@@ -6,12 +6,11 @@ jobs:
     executor: gcp-gcr/default
     steps:
       - checkout
-      - gcp-gcr/gcr-auth:
-          gcloud-service-key: GCLOUD_SERVICE_KEY
+      # - gcp-gcr/gcr-auth:
+      #     gcloud-service-key: GCLOUD_SERVICE_KEY
       - gcp-gcr/build-image:
           image: api
           no_output_timeout: 20m
-          registry-url: eu.gcr.io
       - gcp-gcr/push-image:
           digest-path: /tmp/digest.txt
           image: orb-test
