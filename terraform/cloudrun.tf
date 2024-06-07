@@ -5,7 +5,7 @@ resource "google_cloud_run_service" "run_service" {
   template {
     spec {
       containers {
-        image = "us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/api:latest"
+        image = "us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/investmentbot-425621/api:latest"
         
         ports {
           container_port = 5000
