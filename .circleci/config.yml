@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - gcp-gcr/gcr-auth:
-          gcloud-service-key: $GCLOUD_SERVICE_KEY
+          gcloud-service-key: GCLOUD_SERVICE_KEY
       - gcp-gcr/build-image:
           image: api
           no_output_timeout: 20m
