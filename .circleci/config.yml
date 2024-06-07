@@ -1,12 +1,15 @@
 version: 2.1
 orbs:
   python: circleci/python@2
+  gcp-gcr: circleci/gcp-gcr@0.15.3
 
 executors:
   docker-executor:
     docker:
       - image: circleci/python:3.9
-      
+
+
+
 jobs:
   test-python:
     docker:
@@ -41,7 +44,13 @@ jobs:
       - run:
           name: Build Docker image
           command: docker build -t api .
+      - docker/build:
+          image: my-flask-app2
+          tag: ${CIRCLE_SHA1}
 
+      - docker/push:
+          image: us-central1-docker.pkg.dev/your-gcp-project-id/your-repo-name/my-flask-app2
+          tag: ${CIRCLE_SHA1}
       - run:
           name: Tag Docker image
           command: docker tag api us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/api:${CIRCLE_SHA1}
@@ -53,5 +62,11 @@ workflows:
   build:
     jobs:
       # - test-python
-      - build-and-push
+      # - build-and-push
+      - gcp-gcr/build-and-push-image:
+          image: api
+          filters:
+            branches:
+              only:
+                main
 
