@@ -3,7 +3,6 @@ orbs:
   python: circleci/python@2
 jobs:
   test-python:
-    # Install dependencies and run tests
     docker:
       - image: cimg/python:3.8-node
     steps:
@@ -14,23 +13,10 @@ jobs:
           command: pytest --junitxml=junit.xml || ((($? == 5)) && echo 'Did not find any tests to run.')
       - store_test_results:
           path: junit.xml
-  deploy:
-    # This is an example deploy job, not actually used by the workflow
-    docker:
-      - image: cimg/base:stable
-    steps:
-      # Replace this with steps to deploy to users
-      - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
   build-and-push:
     executor: docker-executor
     steps:
       - checkout
-
-      - setup_remote_docker:
-          version: 20.10.7
-
       # - run:
       #     name: Install Google Cloud SDK
       #     command: |
@@ -58,10 +44,8 @@ jobs:
           name: Push Docker image to Google Container Registry
           command: docker push us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/api:${CIRCLE_SHA1}
 workflows:
-  build-and-test:
+  build:
     jobs:
-      - test-python
+      # - test-python
       - build-and-push
-    # - deploy:
-    #     requires:
-    #       - test-python
+
