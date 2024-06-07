@@ -5,6 +5,14 @@
         "responses": ["Hi there!", "Hello! How can I help you today?"]
       },
       {
+        "pattern": "WHAT QUESTIONS CAN I ASK about stock market?",
+        "responses": ["You can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
+      },
+      {
+        "pattern": "HELLO",
+        "responses": ["Hi there!", "Hello! How can I help you today?"]
+      },
+      {
         "pattern": "WHAT IS YOUR NAME?",
         "responses": ["I'm a chatbot. You can call me InvestSentiment."]
       },
@@ -21,32 +29,196 @@
         "responses": ["I'm just a bot, so I don't have feelings, but thanks for asking!"]
       },
       {
+        "pattern": "CAN YOU HELP ME",
+        "responses": ["Of course! What do you need help with?"]
+      },
+      {
+        "pattern": "WHAT ARE STOCKS?",
+        "responses": ["Stocks represent ownership in a company. When you buy shares of a company's stock, you become a partial owner and may benefit from its growth and profitability."]
+      },
+      {
+        "pattern": "HOW DO I BUY STOCKS?",
+        "responses": ["To buy stocks, you'll need to open a brokerage account, research stocks you're interested in, place an order through your broker, and then monitor your investments."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK EXCHANGE?",
+        "responses": ["A stock exchange is a marketplace where stocks are bought and sold. Examples include the New York Stock Exchange (NYSE) and the Nasdaq."]
+      },
+      {
+        "pattern": "WHAT IS A DIVIDEND?",
+        "responses": ["A dividend is a portion of a company's earnings that is distributed to its shareholders. It's usually paid out regularly, either quarterly or annually."]
+      },
+      {
+        "pattern": "HOW DO I RESEARCH STOCKS?",
+        "responses": ["You can research stocks by analyzing their financial statements, examining their competitive position, evaluating industry trends, and considering analyst recommendations."]
+      },
+      {
+        "pattern": "WHAT IS A BULL MARKET?",
+        "responses": ["A bull market is a period of rising stock prices, typically accompanied by investor optimism and economic growth."]
+      },
+      {
+        "pattern": "WHAT IS A BEAR MARKET?",
+        "responses": ["A bear market is a period of falling stock prices, usually characterized by investor pessimism and economic downturn."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK INDEX?",
+        "responses": ["A stock index is a measurement of the value of a section of the stock market. Examples include the S&P 500 and the Dow Jones Industrial Average."]
+      },
+      {
+        "pattern": "WHAT IS A BLUE CHIP STOCK?",
+        "responses": ["Blue chip stocks are shares of large, well-established companies with a history of stable earnings and dividends. They're considered relatively safe investments."]
+      },
+      {
+        "pattern": "WHAT IS VOLATILITY?",
+        "responses": ["Volatility refers to the degree of variation in a stock's trading price over time. High volatility indicates large price swings, while low volatility suggests stability."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK OPTION?",
+        "responses": ["A stock option is a contract that gives the holder the right, but not the obligation, to buy or sell a specific quantity of a stock at a predetermined price within a set timeframe."]
+      },
+      {
+        "pattern": "HOW DO I DIVERSIFY MY STOCK PORTFOLIO?",
+        "responses": ["Diversification involves spreading your investments across different asset classes and industries to reduce risk. You can achieve this by investing in stocks from various sectors and geographic regions."]
+      },
+      {
+        "pattern": "WHAT IS DAY TRADING?",
+        "responses": ["Day trading is the practice of buying and selling stocks within the same trading day, with the aim of profiting from short-term price movements."]
+      },
+      {
+        "pattern": "HOW DO I KNOW WHEN TO SELL A STOCK?",
+        "responses": ["Deciding when to sell a stock depends on your investment goals, risk tolerance, and market conditions. It's essential to regularly review your portfolio and consider factors such as earnings growth, valuation, and future prospects."]
+      },
+      {
+        "pattern": "WHAT IS SHORT SELLING?",
+        "responses": ["Short selling is a trading strategy where an investor borrows shares of a stock and sells them on the market, hoping to buy them back later at a lower price to profit from the difference."]
+      },
+      {
+        "pattern": "WHAT IS TECHNICAL ANALYSIS?",
+        "responses": ["Technical analysis involves analyzing past market data, primarily price and volume, to forecast future price movements. It's based on the belief that historical price patterns repeat themselves."]
+      },
+      {
+        "pattern": "WHAT IS FUNDAMENTAL ANALYSIS?",
+        "responses": ["Fundamental analysis involves evaluating a company's financial health, management team, industry position, and economic indicators to determine its intrinsic value and potential for future growth."]
+      },
+      {
+        "pattern": "WHAT IS AN IPO?",
+        "responses": ["An IPO, or Initial Public Offering, is the process by which a private company becomes publicly traded by selling shares of its stock to the general public for the first time."]
+      },
+      {
+        "pattern": "HOW DO I CALCULATE A COMPANY'S P/E RATIO?",
+        "responses": ["To calculate a company's price-to-earnings (P/E) ratio, divide its current stock price by its earnings per share (EPS). It's a commonly used valuation metric to assess whether a stock is overvalued or undervalued."]
+      },
+      {
+        "pattern": "WHAT IS MARKET CAP?",
+        "responses": ["Market capitalization, or market cap, is the total value of a company's outstanding shares of stock. It's calculated by multiplying the current stock price by the total number of shares outstanding."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK SPLIT?",
+        "responses": ["A stock split is when a company divides its existing shares into multiple shares to decrease the price per share. The total value of the shares remains the same."]
+      },
+      {
+        "pattern": "WHAT IS A REVERSE STOCK SPLIT?",
+        "responses": ["A reverse stock split is the opposite of a regular stock split. It consolidates a company's existing shares into fewer shares, increasing the price per share."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK BUYBACK?",
+        "responses": ["A stock buyback, also known as a share repurchase, is when a company purchases its own shares on the open market. It reduces the number of outstanding shares and can increase earnings per share."]
+      },
+      {
+        "pattern": "WHAT IS A MARKET ORDER?",
+        "responses": ["A market order is an order to buy or sell a security at the current market price. It's executed immediately, ensuring the order is filled but not necessarily at a specific price."]
+      },
+      {
+        "pattern": "WHAT IS A LIMIT ORDER?",
+        "responses": ["A limit order is an order to buy or sell a security at a specified price or better. It ensures the order is executed at a specific price or better but may not be filled immediately if the market price doesn't reach the limit."]
+      },
+      {
+        "pattern": "WHAT IS A STOP ORDER?",
+        "responses": ["A stop order, also known as a stop-loss order, is an order to buy or sell a security once the price reaches a specified level, known as the stop price. It's used to limit losses or protect profits."]
+      },
+      {
+        "pattern": "WHAT IS A TRAILING STOP ORDER?",
+        "responses": ["A trailing stop order is a type of stop order that adjusts automatically as the price of a security moves. It trails the market price by a specified percentage or dollar amount, helping to lock in profits while allowing for potential further gains."]
+      },
+      {
+        "pattern": "WHAT IS AFTER-HOURS TRADING?",
+        "responses": ["After-hours trading refers to trading that occurs outside of regular market hours, typically between 4:00 p.m. and 8:00 p.m. Eastern Time. It allows investors to react to news or events that occur outside of normal trading hours."]
+      },
+      {
+        "pattern": "WHAT IS PRE-MARKET TRADING?",
+        "responses": ["Pre-market trading is the trading activity that occurs before the regular market session begins. It starts as early as 4:00 a.m. Eastern Time and can provide indications of how the market may open."]
+      },
+      {
+        "pattern": "WHAT IS A PENNY STOCK?",
+        "responses": ["A penny stock is a low-priced, speculative stock typically trading for less than $5 per share. They often represent small companies with limited liquidity and can be subject to high volatility."]
+      },
+      {
+        "pattern": "WHAT IS A BLUE SKY LAW?",
+        "responses": ["A blue sky law is a state regulation designed to protect investors from securities fraud. These laws require companies to register their securities offerings and provide disclosure to investors."]
+      },
+      {
+        "pattern": "WHAT IS INSIDER TRADING?",
+        "responses": ["Insider trading is the buying or selling of a publicly traded company's stock by someone who has non-public, material information about that stock. It's illegal and can lead to severe penalties."]
+      },
+      {
+        "pattern": "WHAT IS THE SEC?",
+        "responses": ["The SEC, or U.S. Securities and Exchange Commission, is a federal agency responsible for enforcing securities laws, regulating the securities industry, and protecting investors in the United States."]
+      },
+      {
+        "pattern": "WHAT IS A MUTUAL FUND?",
+        "responses": ["A mutual fund is an investment vehicle that pools money from many investors to invest in a diversified portfolio of stocks, bonds, or other securities. It's managed by a professional fund manager."]
+      },
+      {
+        "pattern": "WHAT IS AN ETF?",
+        "responses": ["An ETF, or exchange-traded fund, is a type of investment fund that trades on a stock exchange like a stock. It typically holds assets such as stocks, commodities, or bonds and offers diversification and liquidity."]
+      },
+      {
+        "pattern": "WHAT IS A 401(K)?",
+        "responses": ["A 401(k) is a retirement savings plan sponsored by an employer that allows employees to contribute a portion of their pre-tax income to invest in a variety of mutual funds or other investment options."]
+      },
+      {
+        "pattern": "WHAT IS A ROTH IRA?",
+        "responses": ["A Roth IRA is a retirement savings account that allows individuals to contribute after-tax income and potentially withdraw earnings tax-free in retirement. It offers tax advantages and flexibility."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK MARKET INDEX FUND?",
+        "responses": ["A stock market index fund is a type of mutual fund or ETF that seeks to replicate the performance of a specific stock market index, such as the S&P 500. It offers broad market exposure and low expenses."]
+      },
+      {
+        "pattern": "WHAT IS A HEDGE FUND?",
+        "responses": ["A hedge fund is an investment fund that pools capital from accredited investors and institutional investors to invest in a wide range of assets and strategies. It's typically managed more aggressively than mutual funds."]
+      },
+      {
+        "pattern": "WHAT IS A FINANCIAL ADVISOR?",
+        "responses": ["A financial advisor is a professional who provides advice and guidance on financial matters, such as investments, retirement planning, and estate planning. They can help individuals manage their finances and achieve their financial goals."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK MARKET CRASH?",
+        "responses": ["A stock market crash is a sudden and severe decline in the value of stocks, often resulting in panic selling and widespread financial losses. It can be caused by various factors, including economic downturns, geopolitical events, or investor sentiment."]
+      },
+      {
         "pattern": "I WANT TO BUY @@STOCKNAMES1",
-        "responses": ["That sounds like a good decision!","@@STOCKNAMES1 is a great company"]
+        "responses": ["That sounds like a good decision!","@@STOCKNAMES1 is a great company","I can provide insights about it using markov bs and textblob."]
       },
       {
         "pattern": "WHAT PEOPLE THINK ABOUT @@STOCKNAMES1",
         "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "Test @@STOCKNAMES1",
-        "responses": ["@$test(a,b,@@STOCKNAMES1)"]
-      },
-      {
         "pattern": "What stock I tested?",
-        "responses": ["I tested @@STOCKNAMES1"]
+        "responses": ["You tested @@STOCKNAMES1"]
       },
       {
-        "pattern": "Test2 @@STOCKNAMES1",
-        "responses": ["@$test2(a,b,@@STOCKNAMES1)"]
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1?",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "a",
-        "responses": ["The sentiment about tesla is @$getSentiment(tesla)"]
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use markov",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "b",
-        "responses": ["The sentiment about @@STOCKNAMES1 is @$getSentiment(@@STOCKNAMES1)"]
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use markov.",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
       },
       {
         "pattern": "reddit @@STOCKNAMES1",
@@ -59,10 +231,6 @@
       {
         "pattern": "bs @@STOCKNAMES1",
         "responses": ["The sentiment about @@STOCKNAMES1 is @$bsSentiment(@@STOCKNAMES1)"]
-      },
-      {
-        "pattern": "CAN YOU HELP ME",
-        "responses": ["Of course! What do you need help with?"]
       }
     ],
     "types": {
