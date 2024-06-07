@@ -11,12 +11,12 @@ jobs:
       - gcp-gcr/build-image:
           image: api
           no_output_timeout: 20m
+          tag: ${CIRCLE_SHA1}
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/push-image:
           digest-path: /tmp/digest.txt
-          image: api
+          image: docker-repo/api
           registry-url: us-central1-docker.pkg.dev
-          google-project-id: investmentbot-425621
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
