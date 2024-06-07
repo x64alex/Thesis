@@ -11,10 +11,11 @@ jobs:
       - gcp-gcr/build-image:
           image: api
           no_output_timeout: 20m
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
       - gcp-gcr/push-image:
           digest-path: /tmp/digest.txt
-          image: orb-test
-          registry-url: eu.gcr.io
+          image: api
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
