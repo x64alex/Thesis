@@ -43,24 +43,6 @@ def assign_state_to_text(text):
     else:
         return 'neutral'
 
-# Example usage
-data_input = [
-  "I love this product! It's absolutely wonderful.",
-  "I hate this item. It's the worst thing I've ever bought.",
-  "This is good, but it could be better.",
-  "I'm not very happy with this purchase.",
-  "It's a decent item, nothing special.",
-  "Absolutely fantastic experience!",
-  "The quality is mediocre and I am dissatisfied.",
-  "I am delighted with the service. It was exceptional!"
-]
-
-# Apply the function to each text in the input
-for text in data_input:
-    state = assign_state_to_text(text)
-    print(f"Text: {text}\nSentiment State: {state}\n")
-
-
 def build_transition_matrix(states, labels):
   transition_counts = defaultdict(lambda: defaultdict(int))
   for i in range(1, len(labels)):
@@ -108,7 +90,6 @@ def get_sentiment_score(data):
     transition_matrix = build_transition_matrix(states, labels)
     initial_state = labels[0]
     simulation_result = simulate_markov_chain(transition_matrix, initial_state, 10, states)
-    print(simulation_result)
     sentiment_score = calculate_sentiment_score(simulation_result, state_to_score)
     return sentiment_score
 

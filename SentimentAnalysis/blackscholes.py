@@ -77,5 +77,4 @@ def sentiment_analysis_with_stochastic_model(text, mu=0.1, sigma=0.2, r=0.05):
     T = len(text.split())
     sentiment_over_time = calculate_sentiment_stochastic(text, mu, sigma)
     final_score = final_sentiment_score(sentiment_over_time, r, sigma, T)
-    print(final_score)
     return final_score

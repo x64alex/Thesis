@@ -10,7 +10,6 @@ path = Constants().get_constant("path")
 
 
 def get_post_sentiment(post):
-    print(post)
     analysis = TextBlob(post)
     if analysis.sentiment.polarity > 0:
         return 1
