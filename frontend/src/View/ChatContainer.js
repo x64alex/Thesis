@@ -20,7 +20,7 @@ function ChatContainer({ render }) {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:5000/get_response', {
+      const response = await axios.post('http://127.0.0.1:8000/get_response', {
         user_input: userInput
       });
       setLoading(false);
