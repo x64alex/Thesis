@@ -16,6 +16,7 @@ jobs:
           digest-path: /tmp/digest.txt
           image: api
           registry-url: us-central1-docker.pkg.dev
+          google-project-id: investmentbot-425621
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
