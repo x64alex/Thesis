@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Deploy to Cloud Run
           command: |
-            gcloud run deploy backend --project=investmentbot-425621 --image=us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/investmentbot-425621/api:latest --platform=managed --region=us-central1
+              gcloud run deploy backend --project=investmentbot-425621 --image=us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/investmentbot-425621/api:latest --platform=managed --region=us-central1 --service-account=circleci-service-account@investmentbot-425621.iam.gserviceaccount.com
 workflows:
   commit:
     jobs:
