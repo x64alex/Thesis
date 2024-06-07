@@ -1,0 +1,33 @@
+version: '2.1'
+orbs:
+  gcp-gcr: circleci/gcp-gcr@0.16.3
+jobs:
+  build-and-push:
+    executor: gcp-gcr/default
+    steps:
+      - checkout
+      - gcp-gcr/gcr-auth:
+          registry-url: us-central1-docker.pkg.dev
+      - gcp-gcr/build-image:
+          image: api
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
+      - gcp-gcr/push-image:
+          image: api
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
+  deploy-cloud-run:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - checkout
+      - gcp-gcr/gcr-auth
+      - run:
+          name: Deploy to Cloud Run
+          command: |
+            gcloud run deploy backend --project=investmentbot-425621 --image=us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/investmentbot-425621/api:latest --platform=managed --region=us-central1
+workflows:
+  commit:
+    jobs:
+      - build-and-push
+      - deploy-cloud-run:
+          requires:
+            - build-and-push
