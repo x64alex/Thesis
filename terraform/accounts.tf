@@ -30,6 +30,16 @@ resource "google_project_iam_binding" "cloud_run_get_permission" {
   ]
 }
 
+resource "google_project_iam_binding" "cloud_run_act_as" {
+  project = "investmentbot-425621"
+  role    = "roles/iam.serviceAccountUser"
+
+  members = [
+    "serviceAccount:${google_service_account.circleci_service_account.email}"
+  ]
+}
+
+
 resource "google_service_account_key" "circleci_service_account_key" {
   service_account_id = google_service_account.circleci_service_account.name
   private_key_type = "TYPE_PKCS12_FILE"
