@@ -10,9 +10,9 @@ jobs:
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/build-image:
           image: api
-          tag: ${CIRCLE_SHA1}
-          registry-url: us-central1-docker.pkg.dev
+          registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
       - gcp-gcr/push-image:
+          image: api
           registry-url: us-central1-docker.pkg.dev/investmentbot-425621/docker-repo
 workflows:
   commit:
