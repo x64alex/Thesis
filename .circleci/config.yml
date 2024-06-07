@@ -19,6 +19,7 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - checkout
+      - gcp-gcr/gcr-auth
       - run:
           name: Deploy to Cloud Run
           command: |
