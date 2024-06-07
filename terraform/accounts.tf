@@ -21,15 +21,16 @@ resource "google_project_iam_binding" "storage_admin" {
   ]
 }
 
-resource "google_service_account_key" "circleci_service_account_key" {
-  service_account_id = google_service_account.circleci_service_account.name
-  keepers = {
-    last_updated = filemd5("${path.module}/main.tf")
-  }
-  private_key_type = "TYPE_GOOGLE_CREDENTIALS_FILE"
+resource "google_project_iam_binding" "artifact_registry_upload" {
+  project = "investmentbot-425621"
+  role    = "roles/artifactregistry.repositories.uploadArtifacts"
+
+  members = [
+    "serviceAccount:${google_service_account.circleci_service_account.email}"
+  ]
 }
 
-output "circleci_service_account_key" {
-  value     = google_service_account_key.circleci_service_account_key.private_key
-  sensitive = true
+resource "google_service_account_key" "circleci_service_account_key" {
+  service_account_id = google_service_account.circleci_service_account.name
+  private_key_type = "TYPE_PKCS12_FILE"
 }
