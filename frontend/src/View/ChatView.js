@@ -14,9 +14,9 @@ function ChatView({
       <>
         <div className="chat-history">
           {chatHistory.map((message, index) => (
-            <div key={index}>
-              <div>User: {message.user}</div>
-              <div>Response: {message.response}</div>
+            <div key={index} className="message-container">
+              <div className="user-message">{message.user}</div>
+              <div className="bot-message">{message.response}</div>
             </div>
           ))}
           <div ref={chatInputRef}></div>
@@ -29,6 +29,7 @@ function ChatView({
             label="Enter your message" 
             fullWidth
             disabled={loading}
+            sx={{ margin: '10px' }}
           />
           <Button 
             type="submit" 

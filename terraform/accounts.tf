@@ -12,15 +12,6 @@ resource "google_project_iam_binding" "artifact_registry_writer" {
   ]
 }
 
-resource "google_project_iam_binding" "storage_admin" {
-  project = "investmentbot-425621"
-  role    = "roles/storage.admin"
-
-  members = [
-    "serviceAccount:${google_service_account.circleci_service_account.email}"
-  ]
-}
-
 resource "google_project_iam_binding" "cloud_run_get_permission" {
   project = "investmentbot-425621"
   role    = "roles/run.developer"
@@ -39,6 +30,14 @@ resource "google_project_iam_binding" "cloud_run_act_as" {
   ]
 }
 
+resource "google_project_iam_binding" "storage_admin" {
+  project = "investmentbot-425621"
+  role    = "roles/storage.admin"
+
+  members = [
+    "serviceAccount:${google_service_account.circleci_service_account.email}"
+  ]
+}
 
 resource "google_service_account_key" "circleci_service_account_key" {
   service_account_id = google_service_account.circleci_service_account.name

@@ -5,6 +5,38 @@
         "responses": ["Hi there!", "Hello! How can I help you today?"]
       },
       {
+        "pattern": "What company should I buy?",
+        "responses": [
+          "I can not advise you about buying any particular stock but i can say what is the people sentiment about any major stock. You can use textblob, bs or markov and the stock name."
+        ]
+      },
+      {
+        "pattern": "What stock should I buy?",
+        "responses": [
+          "I can not advise you about buying any particular stock but i can say what is the people sentiment about any major stock. You can use textblob, bs or markov and the stock name."
+        ]
+      },
+      {
+        "pattern": "WHAT IS A STOCK?",
+        "responses": ["A stock represents ownership in a company. When you buy stock, you're essentially buying a small piece of that company. Stockholders may receive dividends and have voting rights in certain decisions."]
+      },
+      {
+        "pattern": "WHAT can i ask",
+        "responses": ["You can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
+      },
+      {
+        "pattern": "I want to learn about stock market",
+        "responses": ["Sure. you can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
+      },
+      {
+        "pattern": "WHAT questions can i ask",
+        "responses": ["You can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
+      },
+      {
+        "pattern": "WHAT questions can i ask?",
+        "responses": ["You can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
+      },
+      {
         "pattern": "WHAT QUESTIONS CAN I ASK about stock market?",
         "responses": ["You can ask about the following:\n1. What are stocks?\n2. How do I buy stocks?\n3. What is a stock exchange?\n4. What is a dividend?\n5. How do I research stocks?\n6. What is a bull market?\n7. What is a bear market?\n8. What is a stock index?\n9. What is a blue chip stock?\n10. What is volatility?\n11. What is a stock option?\n12. How do I diversify my stock portfolio?\n13. What is day trading?\n14. How do I know when to sell a stock?\n15. What is short selling?\n16. What is technical analysis?\n17. What is fundamental analysis?\n18. What is an IPO?\n19. How do I calculate a company's P/E ratio?\n20. What is market cap?"]
       },
@@ -217,11 +249,11 @@
         "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use markov.",
-        "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use bs.",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @bsSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "reddit @@STOCKNAMES1",
+        "pattern": "textblob @@STOCKNAMES1",
         "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
       },
       {

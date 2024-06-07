@@ -24,10 +24,36 @@ jobs:
           name: Deploy to Cloud Run
           command: |
             gcloud run deploy backend --project=investmentbot-425621 --image=us-central1-docker.pkg.dev/investmentbot-425621/docker-repo/investmentbot-425621/api:latest --platform=managed --region=us-central1
+  jcml-unit-test:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - run:
+          name: Run JCML Unit Tests
+          command: |
+            . venv/bin/activate
+            python -m unittest discover -s tests
+
 workflows:
   commit:
     jobs:
-      - build-and-push
+      - jcml-unit-test
+      - build-and-push:
+          requires:
+            - jcml-unit-test
+          filters:
+            branches:
+              only: main
       - deploy-cloud-run:
           requires:
             - build-and-push
+          filters:
+            branches:
+              only: main

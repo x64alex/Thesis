@@ -10,7 +10,18 @@ resource "google_cloud_run_service" "run_service" {
         ports {
           container_port = 5000
         }
+        
+        liveness_probe {
+          http_get {
+            path   = "/-/healthy"
+            port   = 5000
+          }
+
+          initial_delay_seconds = 5
+          period_seconds        = 10
+        }
       }
+      
     }
   }
 
