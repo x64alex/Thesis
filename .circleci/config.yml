@@ -9,7 +9,7 @@ jobs:
       - gcp-gcr/gcr-auth:
           registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/build-image:
-          image: api
+          image: docker-repo/api
           no_output_timeout: 20m
           tag: ${CIRCLE_SHA1}
           registry-url: us-central1-docker.pkg.dev
