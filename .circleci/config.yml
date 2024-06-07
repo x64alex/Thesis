@@ -7,15 +7,15 @@ jobs:
     steps:
       - checkout
       - gcp-gcr/gcr-auth:
-          registry-url: us-central1-docker.pkg.dev/investmentbot-425621
+          registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/build-image:
           image: api
           no_output_timeout: 20m
-          registry-url: us-central1-docker.pkg.dev/investmentbot-425621
+          registry-url: us-central1-docker.pkg.dev
       - gcp-gcr/push-image:
           digest-path: /tmp/digest.txt
           image: api
-          registry-url: us-central1-docker.pkg.dev/investmentbot-425621
+          registry-url: us-central1-docker.pkg.dev
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
