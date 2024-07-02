@@ -10,15 +10,15 @@ def bsSentiment(companyName):
 
     sentiment = 0
     
-    for i in range(30):
+    for i in range(10):
         sentiment_post = 0
         for post in posts:
             sentiment_post += sentiment_analysis_with_stochastic_model(post)    
 
         sentiment += sentiment_post/len(posts)
 
-    sentiment = sentiment /30
-    sentiment *= 10
+    sentiment *= 200
+
     if sentiment >=0:
         return f"{sentiment:.2f}% positive"
     return f"{sentiment:.2f}% negative"
