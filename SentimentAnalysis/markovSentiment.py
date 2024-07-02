@@ -10,10 +10,10 @@ def markovSentiment(companyName):
     posts = client.get_posts(companyName, 40)
     score = 0
 
-    for i in range(10):
+    for i in range(30):
         score += get_sentiment_score(posts)
     
-    score = score * 100
+    score = score * 3
 
     if score >=0:
         return f"{score:.2f}% positive"
