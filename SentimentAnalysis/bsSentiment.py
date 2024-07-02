@@ -1,4 +1,5 @@
 import sys
+sys.path.append('./SentimentAnalysis')
 
 from SocialClient import SocialClient, RedditAdapter, get_post_sentiment
 from blackscholes import sentiment_analysis_with_stochastic_model
