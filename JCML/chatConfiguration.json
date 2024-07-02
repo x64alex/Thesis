@@ -11,6 +11,18 @@
         ]
       },
       {
+        "pattern": "Who are you?",
+        "responses": [
+          "I am InvestBot, a chatbot here to assist you with any questions you have about the stock market and help you find the people sentiment around different stocks."
+        ]
+      },
+      {
+        "pattern": "Who are you",
+        "responses": [
+          "I am InvestBot, a chatbot here to assist you with any questions you have about the stock market and help you find the people sentiment around different stocks."
+        ]
+      },
+      {
         "pattern": "What stock should I buy?",
         "responses": [
           "I can not advise you about buying any particular stock but i can say what is the people sentiment about any major stock. You can use textblob, bs or markov and the stock name."
@@ -18,6 +30,10 @@
       },
       {
         "pattern": "WHAT IS A STOCK?",
+        "responses": ["A stock represents ownership in a company. When you buy stock, you're essentially buying a small piece of that company. Stockholders may receive dividends and have voting rights in certain decisions."]
+      },
+      {
+        "pattern": "WHAT IS A STOCK",
         "responses": ["A stock represents ownership in a company. When you buy stock, you're essentially buying a small piece of that company. Stockholders may receive dividends and have voting rights in certain decisions."]
       },
       {
