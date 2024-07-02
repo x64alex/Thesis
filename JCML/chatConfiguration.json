@@ -241,15 +241,15 @@
         "responses": ["You tested @@STOCKNAMES1"]
       },
       {
-        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1?",
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1 ?",
         "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use markov",
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1 ? Use markov",
         "responses": ["The sentiment about @@STOCKNAMES1 is @$markovSentiment(@@STOCKNAMES1)"]
       },
       {
-        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1? Use bs.",
+        "pattern": "WHAT is the sentiment ABOUT @@STOCKNAMES1 ? Use bs.",
         "responses": ["The sentiment about @@STOCKNAMES1 is @bsSentiment(@@STOCKNAMES1)"]
       },
       {
