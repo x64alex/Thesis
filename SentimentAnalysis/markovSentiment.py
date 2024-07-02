@@ -8,7 +8,13 @@ def markovSentiment(companyName):
     adapter = RedditAdapter()
     client = SocialClient(adapter)
     posts = client.get_posts(companyName, 40)
-    score = get_sentiment_score(posts) * 100
+    score = 0
+
+    for i in range(10):
+        score += get_sentiment_score(posts)
+    
+    score = score * 100
+
     if score >=0:
         return f"{score:.2f}% positive"
     return f"{score:.2f}% negative"

@@ -4,8 +4,6 @@ sys.path.append('./SentimentAnalysis')
 from SocialClient import SocialClient, RedditAdapter, get_post_sentiment
 
 def redditSentiment(companyName):
-
-    # to present in the powerpoint
     adapter = RedditAdapter()
     client = SocialClient(adapter)
     posts = client.get_posts(companyName, 20)

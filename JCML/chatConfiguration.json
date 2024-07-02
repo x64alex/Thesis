@@ -237,6 +237,10 @@
         "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
       },
       {
+        "pattern": "WHAT PEOPLE THINK ABOUT @@STOCKNAMES1 ?",
+        "responses": ["The sentiment about @@STOCKNAMES1 is @$redditSentiment(@@STOCKNAMES1)"]
+      },
+      {
         "pattern": "What stock I tested?",
         "responses": ["You tested @@STOCKNAMES1"]
       },
