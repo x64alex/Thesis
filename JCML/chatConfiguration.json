@@ -1,6 +1,10 @@
 {
     "matches": [
       {
+        "pattern": "xam",
+        "responses": ["Hi there!", "Hello! How can I help you today?"]
+      },
+      {
         "pattern": "HELLO!",
         "responses": ["Hi there!", "Hello! How can I help you today?"]
       },
